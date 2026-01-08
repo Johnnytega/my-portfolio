@@ -8,18 +8,58 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# --- CUSTOM CSS (For that Tech Vibe) ---
+# --- CUSTOM CSS (Responsive & Tech Vibe) ---
+# This checks screen size. If mobile, it shrinks the text to fit.
 st.markdown("""
 <style>
-    .main-header {font-size: 60px; font-weight: 700; color: #ffffff; text-align: center; letter-spacing: 5px;}
-    .sub-header {font-size: 25px; color: #00F0FF; text-align: center; margin-bottom: 50px;}
-    .card {background-color: #1E1E1E; padding: 20px; border-radius: 10px; border: 1px solid #333; text-align: center;}
-    .card:hover {border-color: #00F0FF; box-shadow: 0 0 10px #00F0FF;}
+    /* Desktop Style (Big & Spaced Out) */
+    .main-header {
+        font-size: 60px; 
+        font-weight: 700; 
+        color: #ffffff; 
+        text-align: center; 
+        letter-spacing: 15px; 
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    
+    .sub-header {
+        font-size: 20px; 
+        color: #00F0FF; 
+        text-align: center; 
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        background-color: #1E1E1E; 
+        padding: 20px; 
+        border-radius: 10px; 
+        border: 1px solid #333; 
+        text-align: center;
+    }
+    .card:hover {
+        border-color: #00F0FF; 
+        box-shadow: 0 0 10px #00F0FF;
+    }
+
+    /* Mobile Style (Screen narrower than 600px) */
+    @media (max-width: 600px) {
+        .main-header {
+            font-size: 30px; /* Smaller font to fit phone screen */
+            letter-spacing: 3px; /* Tighter spacing so words don't break */
+        }
+        .sub-header {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # --- HERO SECTION ---
-st.markdown('<div class="main-header">T E G A &nbsp;&nbsp;&nbsp;&nbsp; J O H N N Y</div>', unsafe_allow_html=True)
+# Notice: No manual spaces (&nbsp;). The CSS handles the layout now.
+st.markdown('<div class="main-header">Tega Johnny</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Multidisciplinary Tech Professional</div>', unsafe_allow_html=True)
 
 st.write("---")
@@ -50,9 +90,9 @@ st.write("---")
 # --- FOOTER ---
 st.markdown(
     """
-    <div style='text-align: center; color: grey;'>
+    <div style='text-align: center; color: grey; padding-top: 20px;'>
         © 2026 Tega Johnny • Built with Python & Streamlit
     </div>
-    """,
+    """, 
     unsafe_allow_html=True
 )
