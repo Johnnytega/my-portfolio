@@ -7,7 +7,7 @@ st.set_page_config(page_title="Consulting", page_icon="✈️", layout="wide")
 
 # --- HEADER ---
 st.title("✈️ Global Strategy & Visa Consulting")
-st.markdown("*Bridging the gap between Lagos and the World.*")
+st.markdown("*Bridging the gap between Nigeria and the World.*")
 st.write("---")
 
 # --- SECTION 1: MARKET PULSE (LAGOS vs NEW YORK) ---
@@ -70,3 +70,4 @@ with st.expander("Business Advisory"):
 st.write("---")
 st.markdown("### Ready to move?")
 st.markdown("[**Book a Consultation on WhatsApp**](https://wa.me/2349132218713?text=Hi%20Johnny%2C%20I%20saw%20your%20consulting%20dashboard.)")
+
